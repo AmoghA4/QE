@@ -1,0 +1,356 @@
+
+     Program PWSCF v.7.3 starts on 11Jul2025 at  1:10:27 
+
+     This program is part of the open-source Quantum ESPRESSO suite
+     for quantum simulation of materials; please cite
+         "P. Giannozzi et al., J. Phys.:Condens. Matter 21 395502 (2009);
+         "P. Giannozzi et al., J. Phys.:Condens. Matter 29 465901 (2017);
+         "P. Giannozzi et al., J. Chem. Phys. 152 154105 (2020);
+          URL http://www.quantum-espresso.org", 
+     in publications or presentations arising from this work. More details at
+     http://www.quantum-espresso.org/quote
+
+     Parallel version (MPI), running on     8 processors
+
+     MPI processes distributed on     1 nodes
+     0 MiB available memory on the printing compute node when the environment starts
+
+     Waiting for input...
+     Reading input from standard input
+
+     Current dimensions of program PWSCF are:
+     Max number of different atomic species (ntypx) = 10
+     Max number of k-points (npk) =  40000
+     Max angular momentum in pseudopotentials (lmaxx) =  4
+
+     IMPORTANT: XC functional enforced from input :
+     Exchange-correlation= PBE
+                           (   1   4   3   4   0   0   0)
+     Any further DFT definition will be discarded
+     Please, verify this is what you really want
+
+     Message from routine setup:
+     no reason to have ecutrho>4*ecutwfc
+     Message from routine setup:
+     using ibrav=0 with symmetry is DISCOURAGED, use correct ibrav instead
+
+     R & G space division:  proc/nbgrp/npool/nimage =       8
+     Subspace diagonalization in iterative solution of the eigenvalue problem:
+     a serial algorithm will be used
+
+
+     Parallelization info
+     --------------------
+     sticks:   dense  smooth     PW     G-vecs:    dense   smooth      PW
+     Min         171      68     20                30407     7688    1232
+     Max         172      69     21                30418     7705    1247
+     Sum        1369     547    163               243293    61557    9903
+
+     Using Slab Decomposition
+
+
+     Title: 
+     SCF Calculation for Pristine WSe2 Unitcell                                 
+
+
+     bravais-lattice index     =            0
+     lattice parameter (alat)  =       6.2738  a.u.
+     unit-cell volume          =    1288.2966 (a.u.)^3
+     number of atoms/cell      =            3
+     number of atomic types    =            2
+     number of electrons       =         0.00
+     number of Kohn-Sham states=           30
+     kinetic-energy cutoff     =      50.0000  Ry
+     charge density cutoff     =     500.0000  Ry
+     scf convergence threshold =      1.0E-10
+     mixing beta               =       0.4000
+     number of iterations used =            8  plain     mixing
+     Exchange-correlation= PBE
+                           (   1   4   3   4   0   0   0)
+
+     celldm(1)=   6.273764  celldm(2)=   0.000000  celldm(3)=   0.000000
+     celldm(4)=   0.000000  celldm(5)=   0.000000  celldm(6)=   0.000000
+
+     crystal axes: (cart. coord. in units of alat)
+               a(1) = (   1.000000   0.000000   0.000000 )  
+               a(2) = (  -0.500000   0.866025   0.000000 )  
+               a(3) = (   0.000000   0.000000   6.024218 )  
+
+     reciprocal axes: (cart. coord. in units 2 pi/alat)
+               b(1) = (  1.000000  0.577350 -0.000000 )  
+               b(2) = (  0.000000  1.154701  0.000000 )  
+               b(3) = (  0.000000 -0.000000  0.165997 )  
+
+
+     PseudoPot. # 1 for    read from file:
+     ./pseudo/Se.pbe-dn-kjpaw_psl.1.0.0.UPF
+     MD5 check sum: ac240dd2bae32a30e0bf3a38df9c8785
+     Pseudo is Norm-conserving, Zval =  0.0
+     
+     Using radial grid of    0 points,  0 beta functions with: 
+
+     PseudoPot. # 2 for    read from file:
+     ./pseudo/W.pbe-spn-kjpaw_psl.1.0.0.UPF
+     MD5 check sum: 03c3df5b60893f488392c7401945500a
+     Pseudo is Norm-conserving, Zval =  0.0
+     
+     Using radial grid of    0 points,  0 beta functions with: 
+
+     atomic species   valence    mass     pseudopotential
+     Se                0.00    78.96000       ( 1.00)
+     W                 0.00   183.84000       ( 1.00)
+
+      6 Sym. Ops. (no inversion) found
+
+
+                                    s                        frac. trans.
+
+      isym =  1     identity                                     
+
+ cryst.   s( 1) = (     1          0          0      )
+                  (     0          1          0      )
+                  (     0          0          1      )
+
+ cart.    s( 1) = (  1.0000000  0.0000000  0.0000000 )
+                  (  0.0000000  1.0000000  0.0000000 )
+                  (  0.0000000  0.0000000  1.0000000 )
+
+
+      isym =  2     120 deg rotation - cryst. axis [0,0,1]       
+
+ cryst.   s( 2) = (     0          1          0      )
+                  (    -1         -1          0      )
+                  (     0          0          1      )
+
+ cart.    s( 2) = ( -0.5000000 -0.8660254  0.0000000 )
+                  (  0.8660254 -0.5000000  0.0000000 )
+                  (  0.0000000  0.0000000  1.0000000 )
+
+
+      isym =  3     120 deg rotation - cryst. axis [0,0,-1]      
+
+ cryst.   s( 3) = (    -1         -1          0      )
+                  (     1          0          0      )
+                  (     0          0          1      )
+
+ cart.    s( 3) = ( -0.5000000  0.8660254  0.0000000 )
+                  ( -0.8660254 -0.5000000  0.0000000 )
+                  (  0.0000000  0.0000000  1.0000000 )
+
+
+      isym =  4     inv. 180 deg rotation - cart. axis [1,0,0]   
+
+ cryst.   s( 4) = (    -1          0          0      )
+                  (     1          1          0      )
+                  (     0          0          1      )
+
+ cart.    s( 4) = ( -1.0000000  0.0000000  0.0000000 )
+                  (  0.0000000  1.0000000  0.0000000 )
+                  (  0.0000000  0.0000000  1.0000000 )
+
+
+      isym =  5     inv. 180 deg rotation - cryst. axis [0,1,0]  
+
+ cryst.   s( 5) = (     1          1          0      )
+                  (     0         -1          0      )
+                  (     0          0          1      )
+
+ cart.    s( 5) = (  0.5000000  0.8660254  0.0000000 )
+                  (  0.8660254 -0.5000000  0.0000000 )
+                  (  0.0000000  0.0000000  1.0000000 )
+
+
+      isym =  6     inv. 180 deg rotation - cryst. axis [1,1,0]  
+
+ cryst.   s( 6) = (     0         -1          0      )
+                  (    -1          0          0      )
+                  (     0          0          1      )
+
+ cart.    s( 6) = (  0.5000000 -0.8660254  0.0000000 )
+                  ( -0.8660254 -0.5000000  0.0000000 )
+                  (  0.0000000  0.0000000  1.0000000 )
+
+
+   Cartesian axes
+
+     site n.     atom                  positions (alat units)
+         1        W      tau(   1) = (   0.0000000   0.5773503   1.0344477  )
+         2        Se     tau(   2) = (   0.5000000   0.2886751   1.5351236  )
+         3        Se     tau(   3) = (   0.5000000   0.2886751   0.5337717  )
+
+   Crystallographic axes
+
+     site n.     atom                  positions (cryst. coord.)
+         1        W      tau(   1) = (  0.3333333  0.6666667  0.1717148  )
+         2        Se     tau(   2) = (  0.6666667  0.3333333  0.2548254  )
+         3        Se     tau(   3) = (  0.6666667  0.3333333  0.0886043  )
+
+     number of k points=     5  Gaussian smearing, width (Ry)=  0.0100
+                       cart. coord. in units 2pi/alat
+        k(    1) = (   0.0000000   0.0000000   0.0000000), wk =   0.0800000
+        k(    2) = (   0.0000000   0.2309401   0.0000000), wk =   0.4800000
+        k(    3) = (   0.0000000   0.4618802   0.0000000), wk =   0.4800000
+        k(    4) = (   0.2000000   0.3464102   0.0000000), wk =   0.4800000
+        k(    5) = (   0.2000000   0.5773503   0.0000000), wk =   0.4800000
+
+                       cryst. coord.
+        k(    1) = (   0.0000000   0.0000000   0.0000000), wk =   0.0800000
+        k(    2) = (   0.0000000   0.2000000   0.0000000), wk =   0.4800000
+        k(    3) = (   0.0000000   0.4000000   0.0000000), wk =   0.4800000
+        k(    4) = (   0.2000000   0.2000000   0.0000000), wk =   0.4800000
+        k(    5) = (   0.2000000   0.4000000   0.0000000), wk =   0.4800000
+
+     Dense  grid:   243293 G-vectors     FFT dimensions: (  45,  45, 270)
+
+     Smooth grid:    61557 G-vectors     FFT dimensions: (  30,  30, 180)
+
+     Dynamical RAM for                 wfc:       0.44 MB
+
+     Dynamical RAM for     wfc (w. buffer):       2.64 MB
+
+     Dynamical RAM for           str. fact:       0.93 MB
+
+     Dynamical RAM for           local pot:       0.00 MB
+
+     Dynamical RAM for          nlocal pot:       0.00 MB
+
+     Dynamical RAM for          rho,v,vnew:       2.97 MB
+
+     Dynamical RAM for               rhoin:       0.99 MB
+
+     Dynamical RAM for            rho*nmix:       7.43 MB
+
+     Dynamical RAM for           G-vectors:       1.80 MB
+
+     Dynamical RAM for          h,s,v(r/c):       0.04 MB
+
+     Dynamical RAM for          <psi|beta>:       0.00 MB
+
+     Dynamical RAM for      wfcinit/wfcrot:       0.90 MB
+
+     Estimated static dynamical RAM per process >      13.34 MB
+
+     Estimated max dynamical RAM per process >      21.67 MB
+
+     Estimated total dynamical RAM >     173.35 MB
+ ----2D----2D----2D----2D----2D----2D----2D----2D----2D----2D----2D----2D
+  The code is running with the 2D cutoff
+  Please refer to:
+  Sohier, T., Calandra, M., & Mauri, F. (2017), 
+  Density functional perturbation theory for gated two-dimensional heterostructures:
+  Theoretical developments and application to flexural phonons in graphene.
+  Physical Review B, 96(7), 75448. https://doi.org/10.1103/PhysRevB.96.075448
+ ----2D----2D----2D----2D----2D----2D----2D----2D----2D----2D----2D----2D
+
+     Initial potential from superposition of free atoms
+     Starting wfcs are random
+
+     total cpu time spent up to now is        0.3 secs
+
+     Self-consistent Calculation
+
+     iteration #  1     ecut=    50.00 Ry     beta= 0.40
+     CG style diagonalization
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+             0 MiB given to the printing process from OS
+             0 MiB allocation reported by mallinfo(arena+hblkhd)
+             0 MiB available memory on the node where the printing process lives
+------------------
+     ethr =  1.00E-02,  avg # of iterations =  8.6
+
+     Threshold (ethr) on eigenvalues was too large:
+     Diagonalizing with lowered threshold
+
+     CG style diagonalization
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+             0 MiB given to the printing process from OS
+             0 MiB allocation reported by mallinfo(arena+hblkhd)
+             0 MiB available memory on the node where the printing process lives
+------------------
+     c_bands:  3 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     ethr =  2.61E-29,  avg # of iterations = 10.6
+
+     total cpu time spent up to now is        1.1 secs
+
+     End of self-consistent calculation
+
+          k = 0.0000 0.0000 0.0000 (  7675 PWs)   bands (ev):
+
+     0.0001   0.3760   0.3760   1.5041   1.5041   3.3843   3.3843   6.0165
+     6.0165   9.4008   9.4008  13.5371  13.5371  18.1955  18.1955  18.1956
+    18.1957  18.1956  18.4275  18.4265  18.5715  18.5714  18.5713  18.5714
+    18.5714  18.5713  18.5710  18.5711  18.5714  18.5712
+
+     occupation numbers 
+     0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000
+     0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000
+     0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000
+     0.0000   0.0000   0.0000   0.0000   0.0000   0.0000
+
+          k = 0.0000 0.2309 0.0000 (  7672 PWs)   bands (ev):
+
+     0.7281   1.1039   1.1036   2.2319   2.2320   4.1121   4.1121   6.7443
+     6.7443  10.1286  10.1286  11.6451  12.0211  12.0211  13.1492  13.1492
+    14.2649  14.2649  15.0295  15.0294  15.2841  15.2842  15.6602  15.6602
+    15.6602  15.6603  16.7883  16.7883  16.7883  16.7883
+
+     occupation numbers 
+     0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000
+     0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000
+     0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000
+     0.0000   0.0000   0.0000   0.0000   0.0000   0.0000
+
+          k = 0.0000 0.4619 0.0000 (  7688 PWs)   bands (ev):
+
+     2.9113   3.2873   3.2873   4.4154   4.4154   6.2961   6.2956   6.5501
+     6.9263   6.9264   8.0544   8.0545   8.9278   8.9278   9.9346   9.9346
+    12.3124  12.3127  12.5666  12.5666  13.8284  13.8288  14.2045  14.2045
+    14.2045  14.2044  15.3328  15.3327  15.3327  15.3328
+
+     occupation numbers 
+     0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000
+     0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000
+     0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000
+     0.0000   0.0000   0.0000   0.0000   0.0000   0.0000
+
+          k = 0.2000 0.3464 0.0000 (  7711 PWs)   bands (ev):
+
+     2.1835   2.5595   2.5595   3.6876   3.6876   5.5677   5.5677   8.2000
+     8.2000   9.4618   9.4625   9.8376   9.8376   9.8375   9.8375  10.9657
+    10.9657  10.9658  10.9657  11.5842  11.5842  12.8459  12.8459  12.8459
+    12.8459  15.4782  15.4784  15.4783  15.4784  15.7203
+
+     occupation numbers 
+     0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000
+     0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000
+     0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000
+     0.0000   0.0000   0.0000   0.0000   0.0000   0.0000
+
+          k = 0.2000 0.5774 0.0000 (  7731 PWs)   bands (ev):
+
+     5.0947   5.0950   5.4708   5.4706   5.4707   5.4707   6.5989   6.5989
+     6.5989   6.5989   8.4790   8.4791   8.4794   8.4790   8.7337   9.1096
+     9.1098  10.2381  10.2378  11.1112  11.1112  11.1112  11.1111  12.1181
+    12.1181  14.4955  14.4957  14.4955  14.4955  14.7502
+
+     occupation numbers 
+     0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000
+     0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000
+     0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000
+     0.0000   0.0000   0.0000   0.0000   0.0000   0.0000
+
+     the Fermi energy is    -0.6951 ev
+
+     WARNING: integrated charge=     0.00000000, expected=     0.00000000
+
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+     Error in routine electrons (1):
+     charge is wrong
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+     stopping ...

@@ -1,0 +1,47 @@
+&CONTROL
+  calculation = 'scf'
+  outdir      = './out/'
+  prefix      = 'unitcell'
+  title       = 'SCF Calculation for Pristine WSe2 Unitcell'
+  pseudo_dir  = './pseudo/'
+  tstress     = .TRUE.
+  tprnfor     = .TRUE.
+  verbosity   = 'high'	
+/
+
+&SYSTEM
+  degauss 		    = 0.01
+  ecutrho 		    = 500
+  ecutwfc 		    = 50
+  ibrav 		    = 0
+  nbnd   		    = 30
+  nat 			    = 3
+  ntyp 			    = 2
+  assume_isolated 	    = '2D'
+  occupations 		    = 'smearing'
+  smearing 		    = 'gaussian'
+  input_dft 		    = 'PBE'
+/
+
+&ELECTRONS
+  conv_thr    =   1.0d-10
+  mixing_beta =   0.4
+  diagonalization = 'cg'
+/
+
+ATOMIC_SPECIES
+Se     78.96  Se.pbe-dn-kjpaw_psl.1.0.0.UPF
+W      183.84 W.pbe-spn-kjpaw_psl.1.0.0.UPF
+
+ATOMIC_POSITIONS crystal
+W            0.3333333432       0.6666666864       0.1717148423
+Se           0.6666666864       0.3333333432       0.2548253731
+Se           0.6666666864       0.3333333432       0.0886043115
+
+K_POINTS automatic
+5 5 1 0 0 0
+
+CELL_PARAMETERS angstrom
+      3.3199329376       0.0000000000       0.0000000000
+     -1.6599664688       2.8751462628       0.0000000000
+      0.0000000000       0.0000000000      20.0000000000
